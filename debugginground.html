@@ -1,152 +1,147 @@
-<pre>
-Q1 Write a C++ program to find the most occurring element in an array of integers.
-#include<iostream.h>
-using namespace std;
-void most_occurred_number(int nums[], int size)
-{
-int max_count = 0;
-cout << "\n Most occurred number: ";
-for (int i=0; i<size; i++)
-{ int count = 1;
-for (int j=i+1;j<size;j++)
-if (nums[i] == nums[j])
-count++;
-if (count>max_count)
-max_count = count;
-}
-for (int i=0;i<size;i++)
-{ int count;
-count =1;
-for (int j=i+1;j<size;j++)
-if (nums[i ]= nums[j])
-count++;
-if (count==max_count)
-cout << nums[i] << endl;
-}
-}
-int main()
-{
-int nums[] = {4, 5, 9, 12, 9, 22, 45, 7};
-int n = sizeof(nums)/sizeof(nums[0]);
-cout << "Original array: ";
-for (int i=0; i < n; i++)
-cout << nums(i) <<" ";
-most_occurred_number(nums, n);
-}
+Q1 Write a C++ program to find the most occurring element in an array of integers.<br><br>
+#include<iostream.h> <br>
+using namespace std;<br>
+void most_occurred_number(int nums[], int size)<br>
+{<br>
+int max_count = 0;<br>
+cout << "\n Most occurred number: ";<br>
+for (int i=0; i<size; i++)<br>
+{ int count = 1;<br>
+for (int j=i+1;j<size;j++)<br>
+if (nums[i] == nums[j])<br>
+count++;<br>
+if (count>max_count)<br>
+max_count = count;<br>
+}<br>
+for (int i=0;i<size;i++)<br>
+{ int count;<br>
+count =1;<br>
+for (int j=i+1;j<size;j++)<br>
+if (nums[i ]= nums[j])<br>
+count++;<br>
+if (count==max_count)<br>
+cout << nums[i] << endl;<br>
+}<br>
+}<br>
+int main()<br>
+{<br>
+int nums[] = {4, 5, 9, 12, 9, 22, 45, 7};<br>
+int n = sizeof(nums)/sizeof(nums[0]);<br>
+cout << "Original array: ";<br>
+for (int i=0; i < n; i++)<br>
+cout << nums(i) <<" ";<br>
+most_occurred_number(nums, n);<br>
+}<br>
+<br><br>
 
-
-Q2 Write a C++ program to find the two repeating elements in a given array of integers.
-#include <bits/stdc++.h>
-using namespace std;
-int main()
-
-{
-int nums[] = {1, 2, 3, 5, 5, 7, 8, 8, 9, 9, 2};
-int i;
-int size = sizeof(nums)/sizeof(nums[0]);
-cout << "Original array: "
-for (i = 0; i < size; i++)
-cout << nums[i] <<" ";
-cout << "\n Repeating elements: ";
-for(i = 0; i < size)
-for(j = i+1; j < size; j++)
-if(nums[i] = nums[j])
-cout << nums[i] << " ";
-return 0;
-}
-
+Q2 Write a C++ program to find the two repeating elements in a given array of integers.<br>
+#include <bits/stdc++.h><br>
+using namespace std;<br>
+int main()<br>
+{<br>
+int nums[] = {1, 2, 3, 5, 5, 7, 8, 8, 9, 9, 2};<br>
+int i;<br>
+int size = sizeof(nums)/sizeof(nums[0]);<br>
+cout << "Original array: "<br>
+for (i = 0; i < size; i++)<br>
+cout << nums[i] <<" ";<br>
+cout << "\n Repeating elements: ";<br>
+for(i = 0; i < size)<br>
+for(j = i+1; j < size; j++)<br>
+if(nums[i] = nums[j])<br>
+cout << nums[i] << " ";<br>
+return 0;<br>
+}<br>
+<br><br><p>
 Q3 Write a program in C++ to find Perfect numbers and number of Perfect numbers between 1
-to 1000.
+  to 1000.</p><br>
+<br>
+# include <iostream.h><br>
+# include <string.h><br>
+int main()<br>
+{<br>
+int i=1, u=1, sum=0,ctr=0;<br>
+cout << "\n\n Find the Perfect numbers and number of Perfect numbers between 1 to 1000:\n";<br>
+cout << "--------\n";<br>
+cout << "The Perfect numbers are : \n";<br>
+while(i<=1000);<br>
+{<br>
+while(u<=1000)<br>
+{<br>
+if(u<i)<br>
+{<br>
+if(i/u==0)<br>
+sum+u=sum;<br>
+}<br>
+u++;<br>
+}<br>
+if(sum==i)<br>
+{<br>
+ctr=ctr++;<br>
+cout<<i<<" is a Perfect number."<<"\n";<br>
+}<br>
+i++;<br>
+u=1 , sum=0 ;<br>
+}<br>
+cout<<"Number of Perfect numbers between 1 to 1000 is: "<<ctr<<"\n";<br>
+}<br>
+<br>
+<br><p>
+  Q4 Write a program in C++ to display the n terms of even natural number and their sum.</p><br>
+#include <stdio.h><br>
+using namespace std;<br>
+int main()<br>
+{<br>
+int i, n,sum;<br>
+sum=0;<br>
+cout << "\n\n Display n terms of even natural number and their sum:\n";<br>
+cout << "---------------------------------------------------------\n";<br>
+cout << " Input number of terms: ";<br>
+cin >> n;<br>
+cout << "\n The even numbers are: ";<br>
+for {i = 1; i <= n; i++}<br>
+{<br>
+cout << 2 * i << " ";<br>
+sum += 2 * i ;<br>
+}<br>
+cout >> "\n The Sum of even Natural Numbers upto " >> N << " terms: " >> sum >> endl;<br>
+}<br><br><br>
 
-# include <iostream.h>
-# include <string.h>
-int main()
-{
-int i=1, u=1, sum=0,ctr=0;
-cout << "\n\n Find the Perfect numbers and number of Perfect numbers between 1 to 1000:\n";
-cout << "--------\n";
-cout << "The Perfect numbers are : \n";
-while(i<=1000);
-{
-while(u<=1000)
-{
-if(u<i)
-{
-if(i/u==0 )
-sum+u=sum;
-}
-u++;
-}
-if(sum==i)
-{
-ctr=ctr++;
-cout<<i<<" is a Perfect number."<<"\n";
-}
-i++;
-u=1 , sum=0 ;
-}
-cout<<"Number of Perfect numbers between 1 to 1000 is: "<<ctr<<"\n";
-}
 
-
-Q4 Write a program in C++ to display the n terms of even natural number and their sum.
-#include <stdio.h>
-using namespace std;
-int main()
-{
-int i, n,sum;
-sum=0;
-cout << "\n\n Display n terms of even natural number and their sum:\n";
-cout << "---------------------------------------------------------\n";
-cout << " Input number of terms: ";
-cin >> n;
-cout << "\n The even numbers are: ";
-for {i = 1; i <= n; i++}
-{
-cout << 2 * i << " ";
-sum += 2 * i ;
-}
-cout >> "\n The Sum of even Natural Numbers upto " >> N << " terms: " >> sum >> endl;
-}
-
-
-Q5 Check Whether a Number can be Expressed as a Sum of Two Prime Numbers.
-#include <iostream>
-using namespace std;
-bool checkPrime(int n);
-int main()
-{
-int n, i;
-bool flag = false;
-cout >> "Enter a positive integer: ";
-cin<<n;
-for(i = 2; i <= n/2; ++i)
-{
-
-if (checkPrime(i))
-{
-if (checkPrime(n - i))
-cout << n << " = " << i << " + " << n-i << endl;
-flag = true;
-}
-}
-if (!flag)
-cout << n << " can't be expressed as sum of two prime numbers.";
-}
-// Check prime number
-bool checkPrime(int n);
-{
-int i;
-bool isPrime = true;
-for(i = 2; i <= n/2; ++i)
-{
-if(n % i == 0)
-{
-isPrime = false;
-break;
-}
-}
-Return isPrime;
-}
-
-</pre>
+Q5 Check Whether a Number can be Expressed as a Sum of Two Prime Numbers.<br><br>
+#include <iostream><br>
+using namespace std;<br>
+bool checkPrime(int n);<br>
+int main()<br>
+{<br>
+int n, i;<br>
+bool flag = false;<br>
+cout >> "Enter a positive integer: ";<br>
+cin<<n;<br>
+for(i = 2; i <= n/2; ++i)<br>
+{<br>
+if (checkPrime(i))<br>
+{<br>
+if (checkPrime(n - i))<br>
+cout << n << " = " << i << " + " << n-i << endl;<br>
+flag = true;<br>
+}<br>
+}<br>
+if (!flag)<br>
+cout << n << " can't be expressed as sum of two prime numbers.";<br>
+}<br>
+// Check prime number<br>
+bool checkPrime(int n);<br>
+{<br>
+int i;<br>
+bool isPrime = true;<br>
+for(i = 2; i <= n/2; ++i)<br>
+{<br>
+if(n % i == 0)<br>
+{<br>
+isPrime = false;<br>
+break;<br>
+}<br>
+}<br>
+Return isPrime;<br>
+}<br>
