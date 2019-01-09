@@ -1,0 +1,140 @@
+<pre>
+Q. Write a program in c++ to find row and column sum of a matrix . 
+A.
+#include <iostream.h>
+void main()
+{
+ int A[10][10],i,j,r[10],c[10],row,col;
+ cout << "Enter no of rows and columns:\n";
+ cin >> row >> col;
+ cout << "Enter matrix elements:\n";
+ for( i=0; i<row; i++ )
+ { for ( j=0; j<col; j++ )
+   cin >> A[i][j];
+ } 
+
+for( i=0; i<row; i++ )
+{
+ r[i]=0;
+ for( j=0; j<col; j++ )
+ r[i] = r[i] + A[i][j];
+}
+
+for ( j=0; j<col; j++ )
+{
+ c[j]=0;
+ for ( i=0; i<row; i++ )
+ c[j] = c[j] + A[i][j];
+} 
+
+getch();
+} 
+Q. Write a program in c++ to replace every space in a string with hyphen
+A. 
+#include <cstring> 
+#include <iostream> 
+using namespace std; 
+  
+int main() 
+{ 
+  
+    // Get the String 
+    string str = "A computer science portal for geeks"; 
+    for (int i = 0; i < str.length(); ++i) 
+{  if (str[i] == ' ') { 
+  
+            str[i] = '-'; 
+        } 
+    } 
+    cout << str << endl; 
+    return 0; 
+} 
+
+Q. WAP to test whether the given number is Armstrong number or not .
+A.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int origNum, num, rem, sum = 0;
+  cout << "Enter a positive  integer: ";
+  cin >> origNum;
+
+  num = origNum;
+
+  while(num != 0)
+  {
+      rem = num % 10;
+      sum += rem * rem * rem;
+      num /= 10;
+  }
+
+  if(sum == origNum)
+    cout << origNum << " is an Armstrong number.";
+  else
+    cout << origNum << " is not an Armstrong number.";
+
+  return 0;
+}
+
+Q. WAP that reads a string and check if the string is a palindrome.
+A. #include <iostream>
+using namespace std;
+
+int main(){
+    char string1[20];
+    int i, length;
+    int flag = 0;
+    
+    cout << "Enter a string: "; cin >> string1;
+    
+    length = strlen(string1);
+    
+    for(i=0;i < length ;i++){
+        if(string1[i] != string1[length-i-1]){
+            flag = 1;
+            break;
+   }
+}
+    
+    if (flag) {
+        cout << string1 << " is not a palindrome" << endl; 
+    }    
+    else {
+        cout << string1 << " is a palindrome" << endl; 
+    }
+    system("pause");
+    return 0;
+}
+
+Q. WAP that converts a decimal integer into binary integer. 
+A. 
+#include <iostream> 
+using namespace std; 
+void decToBinary(int n) 
+
+    {int binaryNum[1000]; 
+  
+    // counter for binary array 
+    int i = 0; 
+    while (n > 0) { 
+  
+        // storing remainder in binary array 
+        binaryNum[i] = n % 2; 
+        n = n / 2; 
+        i++; 
+    } 
+  
+    // printing binary array in reverse order 
+    for (int j = i - 1; j >= 0; j--) 
+        cout << binaryNum[j]; 
+} 
+int main() 
+{ 
+    int n = 17; 
+    decToBinary(n); 
+    return 0; 
+} 
+
+</pre>
